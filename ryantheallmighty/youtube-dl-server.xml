@@ -19,10 +19,10 @@
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
   <Networking>
-    <Mode>host</Mode>
+    <Mode>bridge</Mode>
     <Publish>
       <Port>
-        <HostPort>8080</HostPort>
+        <HostPort>5556</HostPort>
         <ContainerPort>8080</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
@@ -36,6 +36,6 @@
     </Volume>
   </Data>
   <WebUI>http://[IP]:[PORT:8080]/</WebUI>
-  <Icon>https://raw.githubusercontent.com/RyanTheAllmighty/unraid-docker-templates/master/ryantheallmighty/icons/youtube-dl-server-icon.png</Icon>
+  <Icon>https://raw.githubusercontent.com/RyanTheAllmighty/unraid-docker-templates/master/ryantheallmighty/icons/youtube-dl-server.png</Icon>
   <ExtraParams></ExtraParams>
 </Containers>
