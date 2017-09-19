@@ -43,13 +43,18 @@
     </Variable>
     <Variable>
       <Name>CONF_FILE</Name>
-      <Value>/etc/youtube-dl-webui/conf.json</Value>
+      <Value>/youtube-dl/conf.json</Value>
     </Variable>
   </Environment>
   <Data>
     <Volume>
       <HostDir>/mnt/cache/appdata/youtube-dl-webui</HostDir>
-      <ContainerDir>/etc/youtube-dl-webui</ContainerDir>
+      <ContainerDir>/youtube-dl</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/media/youtube-dl</HostDir>
+      <ContainerDir>/youtube-dl/downloads</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
