@@ -41,11 +41,15 @@
       <Name>PGID</Name>
       <Value>100</Value>
     </Variable>
+    <Variable>
+      <Name>CONF_FILE</Name>
+      <Value>/etc/youtube-dl-webui/conf.json</Value>
+    </Variable>
   </Environment>
   <Data>
     <Volume>
-      <HostDir>/mnt/cache/appdata/config/youtube-dl-webui</HostDir>
-      <ContainerDir>/etc</ContainerDir>
+      <HostDir>/mnt/cache/appdata/youtube-dl-webui</HostDir>
+      <ContainerDir>/etc/youtube-dl-webui</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
