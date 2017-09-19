@@ -35,7 +35,7 @@
       <Mode>rw</Mode>
     </Volume>
   </Data>
-  <WebUI>http://[IP]:[PORT:8080]/</WebUI>
+  <WebUI>http://[IP]:[PORT:8080]/youtube-dl/</WebUI>
   <Icon>https://raw.githubusercontent.com/RyanTheAllmighty/unraid-docker-templates/master/ryantheallmighty/icons/youtube-dl-server.png</Icon>
   <ExtraParams></ExtraParams>
 </Containers>
