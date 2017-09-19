@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Containers>
+  <Beta>False</Beta>
+  <Category>MediaServer:Video</Category>
+  <Name>kmb32123/youtube-dl-server</Name>
+  <Description>
+    Very spartan and opinionated Web / REST interface for downloading youtube videos onto a server. bottle + youtube-dl.[br][br]
+    [b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]
+    [b]/config[/b] This is where airsonic will store it's configuration file, database and logs.[br]
+    [b]/media[/b] This is where airsonic will scan for media files.[br][br]
+  </Description>
+  <Overview>
+    Airsonic is a free, web-based media streamer, providing ubiquitious access to your music. Use it to share your music with friends, or to listen to your own music while at work. You can stream to multiple players simultaneously, for instance to one player in your kitchen and another in your living room.[br]
+    Airsonic is designed to handle very large music collections (hundreds of gigabytes). Although optimized for MP3 streaming, it works for any audio or video format that can stream over HTTP, for instance AAC and OGG. By using transcoder plug-ins, Airsonic supports on-the-fly conversion and streaming of virtually any audio format, including WMA, FLAC, APE, Musepack, WavPck and Shorten.[br]
+    If you have constrained bandwidth, you may set an upper limit for the bitrate of the music streams. Airsonic will then automatically resample the music to a suitable bitrate.[br]
+    In addition to being a streaming media server, Airsonic works very well as a local jukebox. The intuitive web interface, as well as search and index facilities, are optimized for efficient browsing through large media libraries. Airsonic also comes with an integrated Podcast receiver, with many of the same features as you find in iTunes.[br]
+    Based on Java technology, Airsonic runs on most platforms, including Windows, Mac, Linux and Unix variants.[br][br]
+  </Overview>
+  <Support>https://github.com/RyanTheAllmighty/unraid-docker-templates/issues</Support>
+  <Registry>https://registry.hub.docker.com/u/kmb32123/youtube-dl-server/</Registry>
+  <GitHub>https://github.com/manbearwiz/youtube-dl-server</GitHub>
+  <Repository>kmb32123/youtube-dl-server</Repository>
+  <Project>https://github.com/manbearwiz/youtube-dl-server</Project>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Networking>
+    <Mode>host</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8080</HostPort>
+        <ContainerPort>8080</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user</HostDir>
+      <ContainerDir>/youtube-dl</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI>http://[IP]:[PORT:8080]/</WebUI>
+  <Icon>https://raw.githubusercontent.com/RyanTheAllmighty/unraid-docker-templates/master/ryantheallmighty/icons/youtube-dl-server-icon.png</Icon>
+  <ExtraParams></ExtraParams>
+</Containers>
